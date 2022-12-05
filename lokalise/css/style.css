@@ -2,3 +2,27 @@
 .menu {
     display: flex;
 }
+
+.header {
+    border-bottom: 1px solid #CCCCCC;
+    padding-top: 2.3%;
+}
+
+.logo {
+    width: 11%;
+    margin: 0% 3.5% 2.3% 3.5%;
+}
+
+.logo__img {
+    width: 100%;
+}
+
+.menu {
+    width: 41.11%;
+    justify-content: space-around;
+    font-size: 0.94rem;
+}
+
+.header__button {
+    justify-content: flex-end;
+}
