@@ -1,0 +1,166 @@
+body {
+    background-color: rgb(203, 186, 165);
+}
+
+.header__sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    /*    box-shadow: 20% 20% 20% 10%rgb(139, 139, 32);*/
+    animation: changerSun 30s infinite linear;
+    position: absolute;
+    top: 3%;
+    left: 60%;
+    opacity: 1;
+    transition: all 2s;
+    background: url(../imgs/facesun.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: 180%;
+}
+
+.header__sun:active {
+    transform: rotate(1440deg);
+    transition: all 2s;
+}
+
+.header__cloud {
+    width: 5%;
+    animation: changerCloud 30s infinite linear;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    transition: all 2s;
+}
+
+
+.header__darkclouds {
+    width: 7%;
+    animation: changerCloud 50s infinite linear;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 2s;
+}
+
+.img__darkclouds {
+    width: 100%;
+}
+
+@keyframes changerCloud {
+    from,
+    to {
+        left: 0;
+    }
+
+    66% {
+        left: 95%;
+    }
+}
+
+.header__clouds {
+    width: 5%;
+    animation: changerClouds 30s infinite linear;
+    position: absolute;
+    top: 7%;
+    right: 0;
+    transition: all 2s;
+}
+
+.img__clouds {
+    width: 100%;
+}
+
+.header__darkcloud {
+    width: 12%;
+    animation: changerClouds 55s infinite linear;
+    position: absolute;
+    top: 13%;
+    right: 0;
+    transition: all 2s;
+}
+
+.img__darkcloud {
+    width: 100%;
+}
+
+
+
+@keyframes changerClouds {
+    from,
+    to {
+        right: 0;
+    }
+
+    66% {
+        right: 93%;
+    }
+}
+
+.section__imgs--last {
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 65%;
+    z-index: 3;
+}
+
+.section__apple {
+    animation: changerApples 10s infinite linear;
+    position: absolute;
+    bottom: 25%;
+    left: 70%;
+    transition: all 2s;
+    z-index: 2;
+}
+
+@keyframes changerApples {
+    from {
+        bottom: 25%;
+    }
+
+    55% {
+        bottom: 20%;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+.footer__feertree,
+.footer__lightwood {
+    position: absolute;
+    width: 9%;
+    bottom: 0;
+}
+
+.footer__grass {
+    position: absolute;
+    width: 5%;
+    bottom: 0;
+    z-index: 1;
+}
+
+    
+.footer__img,
+.footer__imgs {
+    width: 100%;
+}
+.grass__second {left: 5%;}
+.grass__third {left: 10%;}
+.grass__fourth {left: 15%;}
+.grass__fifth {left: 20%;}
+.grass__sixth {left: 25%}
+.grass__seventh {left: 30%;}
+.grass__eighth {left: 35%;}
+.grass__ninth {left: 40%;}
+.grass__tenth{left: 45%;}
+.grass__twelfth {left: 50%;}
+.grass__thirteenth {left: 55%;}
+.grass__fourteenth {left: 60%;}
+.grass__fifteenth {left: 65%;}
+.grass__sixteenth {left: 70%;}
+.grass__seventeenth {left: 75%;}
+.grass__eighteenth {left: 80%;}
+.grass__last {left: 85%;}

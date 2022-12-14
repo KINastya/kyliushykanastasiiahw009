@@ -1,0 +1,919 @@
+@import url('../fonts/GraphikLCG-Regular.ttf?family=GraphikLCG:100,100i,200,200i,300,400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "GraphikLCG", sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* common styles */
+
+.container {
+    width: 89.583333333%;
+    /* Общий стиль для контейнера */
+    margin: 0 auto;
+}
+
+
+[class$="hypertext"] {
+    color: #000000;
+    /* Цвет для ссылок внутри текста */
+}
+
+[class$="hypertext"]:hover {
+    color: #0000FF;
+    /* Цвет для ссылок внутри текста при наведении*/
+}
+
+[class$="hypertext"]:active {
+    color: #FF0000;
+    /* Цвет для ссылок внутри текста при нажатии*/
+}
+
+
+[class$="link"] {
+    text-decoration: none;
+    /* Все ссылки без подчеркивания*/
+    font-weight: 400;
+    /* Для всех ссылок общий размер толщина*/
+    font-size: 1.25rem;
+    /* Для всех ссылок общий размер шрифта */
+    color: #000000;
+    /* Для всех ссылок общий цвет шрифта */
+}
+
+[class$="link"]:hover {
+    color: blue;
+    /* Для всех ссылок общий цвет шрифта при наведении*/
+    text-decoration: underline;
+    /* Для всех ссылок нижнее подчеркивание шрифта */
+
+}
+
+[class$="link"]:active {
+    color: red;
+    /* Для всех ссылок цвет при нажатии */
+    text-decoration: underline;
+    /* Для всех ссылок нижнее подчеркивание шрифта при нажатии*/
+
+}
+
+.btn {
+    display: inline-block;
+    /* Для всех кнопок , которые ссылки чтоб паддинги делать и ровнять где 2 шт */
+    text-decoration: none;
+    /* Для всех кнопок , нет подчеркивания */
+    background: #FF6336;
+    /* Для всех кнопок , задний фон */
+    border: 1px solid #FF6336;
+    /* Для всех кнопок , граница которые непрозрачные */
+    color: #ffffff;
+    /* Для всех кнопок , цвет шрифт которые непрозрачные */
+    line-height: 3.75;
+    /* Для всех кнопок , высота строк которые непрозрачные */
+    font-weight: 600px;
+    /* Для всех кнопок , вес шрифта которые непрозрачные */
+    font-size: 1rem;
+    /* Для всех кнопок , шрифт которые непрозрачные*/
+    transition: all .5s;
+    /* Для всех кнопок , переходы смены состояния для плавности*/
+}
+
+.btn:hover {
+    color: #FF6336;
+    /* Для всех кнопок , цвет шрифта при наведении, которые непрозрачные*/
+    background: #ffffff;
+    /* Для всех кнопок , цвет фона, которые непрозрачные*/
+    transition: all .5s;
+    /* Для всех кнопок , переходы смены состояния для плавности*/
+}
+
+.transperent {
+    display: inline-block;
+    /* Для всех кнопок , которые ссылки чтоб паддинги делать и ровнять где 2 шт */
+    text-decoration: none;
+    /* Для всех кнопок , которые ссылки без подчеркивания */
+    line-height: 3.75;
+    /* Для всех кнопок , высота строк которые прозрачные */
+    font-weight: 600px;
+    /* Для всех кнопок , вес шрифта которые прозрачные */
+    font-size: 1rem;
+    /* Для всех кнопок , шрифт которые прозрачные*/
+    color: black;
+    /* Для всех кнопок , цвет шрифт которые прозрачные */
+    border: 1px solid rgba(0, 0, 0, .5);
+    /* Для всех кнопок , цвет и граница которые прозрачные */
+    transition: all .5s;
+    /* Для всех кнопок , переходы смены состояния для плавности*/
+}
+
+.transperent:hover {
+    background: black;
+    color: white;
+    transition: all .5s;
+    /* Для всех кнопок , переходы смены состояния для плавности*/
+}
+
+[class$="btn-wrap"] {
+    font-size: 0;
+}
+
+[class$="titles"],
+[class$="title"] {
+    font-weight: 600;
+}
+
+[class$="text"] {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* header */
+.header,
+.box,
+.menu {
+    display: flex;
+    /* Все в линию  */
+    align-items: center;
+    /* Перпендикулярно по центру  */
+    justify-content: space-between;
+    /* Чтобы  прилегало к краям контейнера  */
+}
+
+.header {
+    padding: 1.736111111% 2.847222222%;
+    /* Отступы как на макете  */
+    border-bottom: 1px solid #cccccc;
+    /* Границу как на макете  */
+}
+
+.logo__picture {
+    width: 100%;
+}
+
+.box {
+    width: 84.727020816%;
+    /* Делаю под макет , чтобы расположить элементы*/
+}
+
+.menu-wrap {
+    width: 51.166810717%;
+    /* Делаю под макет , чтобы расположить элементы*/
+}
+
+.menu__link {
+    font-size: 0.938rem;
+    /* Делаю под макет размер шрифта */
+    line-height: 1.34;
+    /* Делаю под макет высота строк */
+}
+
+.header__button-wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 30.055555556%;
+    /* Делаю кнопки */
+}
+
+.header__btn.transperent {
+    padding: 0 10.707816409%;
+    line-height: 2.8125;
+    margin-right: 2.974393447%;
+    /* Делаю кнопки */
+}
+
+.header__btn {
+    padding: 0 6.543665583%;
+    line-height: 2.8125;
+    margin-right: 0;
+    /* Делаю кнопки */
+}
+
+/* hero */
+
+.hero>.container {
+    padding: 9.513888889% 0 11.944444444% 0;
+    /* паддинги как на макете */
+}
+
+.hero__items-wrap {
+    display: flex;
+    /* Элементы в линию как на макете */
+    justify-content: space-between;
+    /* Лепим к краям */
+}
+
+.hero__article {
+    width: 40.465116279%;
+    /* Ширина под макет */
+}
+
+.hero__title {
+    width: 99.5%;
+    /* Ширина  под макет */
+    margin-bottom: 9.057971014%;
+    /* Нижний отступ под макет */
+    font-size: 4.063rem;
+    /* Шрифт под макет */
+    line-height: 1.076923077;
+    /* Высота строк под макет */
+
+}
+
+.hero__text {
+    width: 82.64673%;
+    /* Ширина  под макет */
+    margin-bottom: 9.578837666%;
+    /* Нижний отступ под макет */
+    font-size: 1.563rem;
+    /* Шрифт под макет */
+    line-height: 1.4;
+    /* Высота строк под макет */
+}
+
+.hero__btn-wrap {
+    margin-bottom: 4.789418833%;
+    /* Нижний отступ под макет */
+}
+
+.hero__btn {
+    margin-right: 1.7%;
+    /* Правый отступ под макет */
+    padding: 0 7.025119084%;
+    /* Внутренние отступ по сторонам под макет */
+}
+
+.hero__btn.transperent {
+    padding: 0 4.968986669%;
+    /* Внутренние отступ по сторонам под макет */
+    border: 1px solid rgba(0, 0, 0, .5);
+    /* Граница с прозрачностью под макет */
+}
+
+.hero__manual {
+    font-weight: 400;
+    /* Толщина шрифта под макет */
+    font-size: 0.938rem;
+    /* Размер шрифта под макет */
+    line-height: 1.67;
+    /* Высота строк под макет */
+}
+
+.hero__picture {
+    width: 100%;
+}
+
+/* company */
+
+.company {
+    background-color: #FF9C7D;
+    /* Цвет строк под макет */
+}
+
+.company>.container {
+    padding: 7.5% 0 7.5% 0;
+    /* Отсуп внутренний под макет */
+}
+
+.company__title {
+    width: 55.813953488%;
+    /* Ширина под макет */
+    margin: 0 auto 5.426356589% auto;
+    /* Отступ под макет */
+    text-align: center;
+    /* Выравнивание текста под макет */
+    font-size: 3.125rem;
+    /* Размер шрифта под макет */
+    line-height: 1.2;
+    /* Высота строк под макет */
+}
+
+.company__img-wrap {
+    display: flex;
+    /* В строку картинки  */
+    justify-content: space-around;
+    /* Чтоб не липли к краям контейнера картинки */
+    align-items: center;
+    /* Ровно по вертикали по центру (по поречной оси) */
+}
+
+/* Contents */
+
+.contents {
+    padding: 6.944444444% 0 10.416666667% 0;
+    /* Отступ как на макете  */
+}
+
+.contents>.container {
+    padding-top: 17.361111111%;
+    /* Отступ верхний как на макете */
+}
+
+.contents>.container:first-child {
+    padding-top: 0%;
+    /* Чтобы не накладывались друг на друга */
+}
+
+.contents__article {
+    display: flex;
+    /* Чтоб в строку было */
+    justify-content: space-between;
+    /* Липло к краям */
+}
+
+.contents .container:nth-of-type(2n+2) .contents__article {
+    flex-direction: row-reverse;
+    /* Чтоб каждый второй наоборот картинка статья*/
+}
+
+.contents__description {
+    display: flex;
+    /* Чтоб все друг под другом*/
+    flex-direction: column;
+    /* Чтоб все друг под другом*/
+    justify-content: center;
+    /* По главной колочной оси центр*/
+    align-items: flex-start;
+    /* По иксу лево */
+    width: 40%;
+    /* Чтоб под макет */
+}
+
+.contents__title {
+    margin-bottom: 5.813953488%;
+    /* Отступ под макет */
+    font-size: 3.125rem;
+    /* Шрифт под макет */
+    line-height: 1.2;
+    /* Высота строк под макет */
+}
+
+.contents__text {
+    line-height: 1.5;
+    /* Высота строк под макет */
+    margin-bottom: 6.201550388%;
+    /* Отступ под макет */
+}
+
+.contents>.container:nth-of-type(1) .contents__text {
+    padding-right: 3.488372093%;
+    /* Под макет чтоб смотрелось */
+}
+
+.contents>.container:nth-of-type(2) .contents__text {
+    padding-right: 14.9%;
+    /* Под макет чтоб смотрелось */
+}
+
+.contents__picture-wrap {
+    width: 49%;
+    /* Под макет чтоб смотрелось */
+}
+
+.contents__picture {
+    width: 100%;
+    /* Адаптация под родителя */
+}
+
+.contents__link {
+    font-weight: 600;
+    line-height: 1.5;
+    /* Шрифт и толщина текста под макет */
+}
+
+/* options */
+
+.options {
+    background-color: #fff8e4;
+    /* Цвет фона */
+}
+
+.options>.container {
+    padding: 8.333333333% 0 10.208333333% 0;
+    /* Отсупы как в макете */
+
+}
+
+.options__title {
+    font-size: 3.125rem;
+    /* Шрифт как в макете */
+    line-height: 1.2;
+    /* Высота строк как в макете */
+    text-align: center;
+    /* Текст по центру как в макете */
+}
+
+.options__items {
+    display: flex;
+    /* Все в строку */
+    flex-wrap: wrap;
+    /* Перенос по три чтоб в ряд */
+    justify-content: space-between;
+    /* Прилепим к краю */
+}
+
+.option__item {
+    display: flex;
+    /* Все в столбец */
+    flex-direction: column;
+    /* Все в столбец */
+    width: 25.581395349%;
+    /* Чтоб по 3 в ряд */
+    margin-top: 5.891472868%;
+    /* Верхний отступ по макету */
+    text-align: center;
+    /* Текст по центру */
+}
+
+.option__picture-wrap {
+    width: 37.24724254%;
+    /* Размер картинки  */
+    margin: 0 auto 6.96969697%;
+    /* Отступы  */
+}
+
+.option__picture {
+    width: 100%;
+    /* Адаптив под родителя */
+}
+
+.options__titles {
+    margin-bottom: 6.96969697%;
+    /* Оступы под макет */
+    font-size: 1.563rem;
+    line-height: 1.4;
+    /* Шрифт и высота строк под макет */
+}
+
+.option__text {
+    font-size: 1.125rem;
+    line-height: 1.388888889;
+    /* Шрифт и высота строк под макет */
+}
+
+/* team */
+
+.team {
+    background: #E5E5E5;
+    /* Фон под макет*/
+}
+
+.team>.container {
+    padding: 10.694444444% 0 15.069444444% 0;
+    /* Внутренние отступы под макет*/
+}
+
+.team__title {
+    font-size: 3.125rem;
+    /* Шрифт под макет*/
+    line-height: 1.2;
+    /* Высота под макет*/
+}
+
+.team__items {
+    display: flex;
+    /* В строку под макет*/
+    justify-content: space-between;
+    /* Лепим к краям */
+    margin-top: 5.813953488%;
+    /* Верхний отступ  */
+}
+
+.team__item {
+    display: flex;
+    /* В колонку под макет*/
+    flex-direction: column;
+    /* В колонку под макет*/
+    width: 34.031007752;
+    /* Ширина под макет*/
+}
+
+.team__item:nth-child(2) {
+    margin: 0% 2.403100775%;
+    /* Приходится насильно раздвигать */
+}
+
+.team__picture-wrap {
+    width: 43.765281174%;
+    /* Вписываем картинку */
+    margin-bottom: 4.661330996%;
+    /* Нижний отступ под макет */
+}
+
+.team__picture {
+    width: 100%;
+    /* Адаптив под макет */
+    height: 183px;
+    /* Насильно высоту , чтоб выровнять отступ под макет */
+}
+
+.team__picture[alt="managersPicture"] {
+    width: 67%;
+    /* Насильно ширину , чтоб выровнять отступ под макет */
+}
+
+.team__titles {
+    font-size: 1.875rem;
+    /* Шрит размер под макет */
+    line-height: 1.33333333333;
+    /* Строки интервал под макет */
+    margin-bottom: 7.027631369%;
+    /* Нижний оступ под макет */
+
+}
+
+.team__text {
+    line-height: 1.5;
+    /* Междустрочный интервал под макет */
+    margin-bottom: 5.323963158%;
+    /* Нижний отступ под макет */
+}
+
+.team__link {
+    line-height: 1.5;
+    /* Междустрочный интервал под макет */
+    text-decoration: underline;
+    /* Для этих ссылок текст подчеркнутыйт */
+}
+
+/* quote */
+
+.quote {
+    background: #C9E8F2;
+    /* Цвет заднего фона под макет */
+}
+
+.quote>.container {
+    padding: 3.680555556% 0 7.291666667% 0;
+    /* Внутренний отступ под макет*/
+}
+
+.wrap {
+    display: flex;
+    /* Все в строку и по краям */
+    justify-content: space-between;
+    /* Лепим к краям*/
+}
+
+.quote__body-wrap {
+    width: 71.317829457%;
+    /* Размер под макет */
+}
+
+.quote__text {
+    margin-top: 1.086956522%;
+    /* Верхний отсуп  */
+    font-size: 1.875rem;
+    /* Размер шрифта под макет */
+    line-height: 1.333333333;
+    /* Высота строк под макет */
+}
+
+.quote__author {
+    margin-top: 2.5%;
+    /* Верхний отсуп  */
+    font-weight: 400;
+    /* Толщина текста под макет */
+    font-size: 0.938rem;
+    /* Размер шрифта под макет */
+    line-height: 1.66666666667;
+    /* Междустрочный интервал под макет */
+}
+
+.quote__foto {
+    width: 100%;
+    /* Адаптив под родителя */
+}
+
+/* rewards */
+
+.rewards {
+    background: #DABC98;
+    /* Задний фон под макет */
+}
+
+.rewards>.container {
+    padding: 5.555555556% 0;
+    /* Отступ под макет */
+}
+
+.rewards__items {
+    display: flex;
+    /* Все в строку */
+}
+
+.rewards__logo {
+    display: flex;
+    /* Все в строку */
+    align-items: center;
+    /* Центр по поперечной оси */
+    justify-content: space-between;
+    /* Лепим к краям. */
+    width: 62.635658915%;
+    /* Ширина по макету. */
+    border-right: 1px solid #000000;
+    /* Рисуем правую границу по макету. */
+}
+
+.rewards__title {
+    width: 59.52970297%;
+    /* Ширина по макету */
+    margin-right: 15.47029703%;
+    /* Правый отсуп по макету */
+    font-size: 2.188rem;
+    /* Размер шрифта по макету */
+    line-height: 1.42857142857;
+    /* Высота строк по макету */
+}
+
+
+.rewards__item {
+    display: flex;
+    /* Все в строку */
+    justify-content: space-around;
+    /* Лепим к краям */
+    align-items: center;
+    /* По вертикальной оси центрируем */
+    width: 37.286821705%;
+    /* Ширину распределяю по макету */
+}
+
+.rewards__picture {
+    width: 100%;
+    /* Адаптив под макет */
+}
+
+/* integrate */
+
+.integrate {
+    background: #E5E5E5;
+    /* Задний фон под макет */
+}
+
+.integrate>.container {
+    padding: 11.736111111% 0 11.25% 0;
+    /* Отступы под макет */
+}
+
+.integrate__wrap {
+    text-align: center;
+}
+
+.integrate__title {
+    width: 61.317829457%;
+    /* Ширину под макет */
+    font-size: 4.063rem;
+    /* Размер шрифта под макет */
+    line-height: 1.15384615385;
+    /* Высота строк под макет */
+}
+
+.integrate__text {
+    width: 41.782945736%;
+    /* Ширину под макет */
+    margin: 0 auto 1.937984496%;
+    /* Отступы под макет */
+    font-size: 1.563rem;
+    /* Шрифт под макет */
+    line-height: 1.2;
+    /* Высота строк под макет */
+}
+
+.integrate__picture-wrap {
+    width: 79.302325581%;
+    /* Ширину под макет */
+    margin: 0 auto 2.480620155%;
+    /* Отступы под макет */
+}
+
+.integrate__picture {
+    width: 100%;
+    /* Адаптив под макет */
+}
+
+.integrate__btn {
+    padding: 0 1.550387597%;
+}
+
+.integrate__title,
+.integrate__btn {
+    margin: 0 auto;
+    /* По центру */
+}
+
+/* localization */
+
+.localization {
+    background: #FF9C7D;
+    /* Задний фон по макету */
+}
+
+.localization>.container {
+    padding: 8.263888889% 0 11.180555556%;
+    /* Отступы мо макету */
+}
+
+.localization__wrap {
+    text-align: center;
+    /* Делаю текст по центру */
+}
+
+.localization__title {
+    width: 60.775193798%;
+    /* Ширина под макет */
+    margin: 0 auto 2.248062016%;
+    /* Отступы под макет */
+    font-size: 4.063rem;
+    /* Шрифт под макет */
+    line-height: 1.15384615385;
+    /* Высота строк под макет */
+}
+
+.localization__text {
+    width: 33.953488372%;
+    /* Ширина под макет */
+    margin: 0 auto 4.186046512%;
+    /* Отступы под макет */
+}
+
+.localization__btn {
+    padding: 0 3.100775194%;
+    /* Внутренние отступы под макет */
+    margin: 0 auto;
+    /* По центру */
+    background-color: #000000;
+    /* Цвет под макет */
+    border: 1px solid #000000;
+    /* Граница под макет */
+    color: #FFFFFF;
+    /* Цвет под макет шрифта*/
+}
+
+.localization__btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    /* Цвет фона шрифта при наведении */
+}
+
+/* footer */
+
+.footer {
+    background: #eeeeee;
+    /* Цвет фона */
+}
+
+.footer>.container {
+    padding: 6.388888889% 0 2.986111111% 0;
+    /* Отступы под макет */
+}
+
+.footer__wrap {
+    display: flex;
+    /* Все в строку */
+    justify-content: space-between;
+    /* Лепим к краям */
+    padding-bottom: 7.364341085%;
+    /* Нижний отступ под макет */
+}
+
+.footer__article {
+    width: 28.682170543%;
+    /* Ширина под макет */
+}
+
+.footer__title {
+    margin-bottom: 6.756756757%;
+    /* Нижний отступ под макет */
+    font-size: 2.5rem;
+    /* Шрифт под макет */
+    line-height: 1.25;
+    /* Высота строк под макет */
+}
+
+.footer__picture-wrap {
+    width: 81.081081081%;
+    /* Ширина под макет */
+    margin-bottom: 8.378378378%;
+    /* Нижний под макет */
+}
+
+.footer__picture {
+    width: 100%;
+    /* Ширина адаптив */
+}
+
+.footer__logo-wrap {
+    margin-bottom: 2.972972973%;
+    /* Нижний отсуп */
+}
+
+.footer__text {
+    margin-bottom: 4.054054054%;
+    /* Нижний отступ */
+    line-height: 1.5;
+    /* Высота строк */
+}
+
+.footer__link {
+    font-weight: 600;
+    /* Толщина шрифта под макет */
+    line-height: 1.5;
+    /* Высота строк под макет */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    /* Все в строку, лепим к краям */
+    width: 65.891472868%;
+    /* Ширина под макет */
+}
+
+.nav__wrap {
+    width: 22%;
+    /* Ширина под макет */
+}
+
+.nav__title {
+    margin-bottom: 11.229946524%;
+    /* Нижний отступ под макет */
+    font-size: 1.25rem;
+    /* Шрифт под макет */
+    line-height: 1.25;
+    /* Высота строк под макет */
+}
+
+.nav__item {
+    margin-bottom: 8.021390374%;
+    /* Нижний отступ для расстояния между словами в списке */
+}
+
+.nav__link {
+    font-size: 0.938rem;
+    /* Размер шрифта */
+}
+
+.basement {
+    display: flex;
+    /* Все в строку */
+    justify-content: space-between;
+    /* Лепим к краям */
+    padding-top: 4.031007752%;
+    border-top: 1px solid #000000;
+}
+
+.basement__logo {
+    display: flex;
+    /* Все в строку */
+}
+
+.basement__picture-wrap {
+    margin-right: 3.406326034%;
+    /* Правый отступ под макет */
+}
+
+.basement__picture {
+    width: 100%;
+    /* Адаптив */
+}
+
+.basement__text {
+    width: 73.236009732%;
+    /* Ширина под макет */
+}
+
+.basement__copyright-wrap {
+    margin-right: 5.891472868%;
+    /* Отступ под макет */
+}
+
+.basement__text,
+.basement__copyright {
+    font-weight: 400;
+    /* Отступ под макет */
+    font-size: 0.75rem;
+    /* Размер шрифта под макет */
+    line-height: 1.25;
+    /* Высота строк под макет */
+}
